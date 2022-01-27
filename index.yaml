@@ -3,6 +3,38 @@ entries:
   datadog:
   - apiVersion: v1
     appVersion: "7"
+    created: "2022-01-27T17:05:10.759133551Z"
+    dependencies:
+    - condition: clusterAgent.metricsProvider.useDatadogMetrics
+      name: datadog-crds
+      repository: https://helm.datadoghq.com
+      tags:
+      - install-crds
+      version: 0.4.5
+    - condition: datadog.kubeStateMetricsEnabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 2.13.2
+    description: Datadog Agent
+    digest: db4e517045218b546db4823d9a788ebd95399d035f885db42e6e4a60decf9248
+    home: https://www.datadoghq.com
+    icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+    keywords:
+    - monitoring
+    - alerting
+    - metric
+    maintainers:
+    - email: support@datadoghq.com
+      name: Datadog
+    name: datadog
+    sources:
+    - https://app.datadoghq.com/account/settings#agent/kubernetes
+    - https://github.com/DataDog/datadog-agent
+    urls:
+    - https://github.com/anapsix/datadog-helm-charts/releases/download/datadog-2.30.0/datadog-2.30.0.tgz
+    version: 2.30.0
+  - apiVersion: v1
+    appVersion: "7"
     created: "2022-01-06T11:16:48.295442172Z"
     dependencies:
     - condition: clusterAgent.metricsProvider.useDatadogMetrics
@@ -7633,6 +7665,26 @@ entries:
     version: v0.1.0
   synthetics-private-location:
   - apiVersion: v2
+    appVersion: 1.19.0
+    created: "2022-01-27T17:05:10.950914619Z"
+    description: Datadog Synthetics Private Location
+    digest: ce7d1feac17711d4dc5b077c1267d3db192fb769dc17b0607f33019e8c493f61
+    home: https://www.datadoghq.com
+    icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+    keywords:
+    - monitoring
+    - synthetics
+    maintainers:
+    - email: support@datadoghq.com
+      name: Datadog
+    name: synthetics-private-location
+    sources:
+    - https://docs.datadoghq.com/synthetics/private_locations
+    - https://app.datadoghq.com/synthetics/settings/private-locations
+    urls:
+    - https://github.com/anapsix/datadog-helm-charts/releases/download/synthetics-private-location-0.12.1/synthetics-private-location-0.12.1.tgz
+    version: 0.12.1
+  - apiVersion: v2
     appVersion: 1.18.1
     created: "2022-01-05T13:25:12.992734383Z"
     description: Datadog Synthetics Private Location
@@ -7912,4 +7964,4 @@ entries:
     urls:
     - https://github.com/DataDog/helm-charts/releases/download/synthetics-private-location-0.1.0/synthetics-private-location-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-06T11:16:48.299014092Z"
+generated: "2022-01-27T17:05:10.954195556Z"
